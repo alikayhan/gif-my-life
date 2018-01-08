@@ -1,0 +1,672 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BE20702D73A3DDE626909B /* Pods_Gif_My_Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E06BA1B7DFAC7293B1A8225 /* Pods_Gif_My_Life.framework */; };
+		B80490EF1F06BECB005A659F /* CategoriesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80490EE1F06BECA005A659F /* CategoriesManager.swift */; };
+		B80490F11F06BF6B005A659F /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80490F01F06BF6B005A659F /* CategoryModel.swift */; };
+		B806A1681EF5B79B00983AD4 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806A1671EF5B79B00983AD4 /* UserProfileViewController.swift */; };
+		B806A16A1EF7048B00983AD4 /* SavedGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806A1691EF7048B00983AD4 /* SavedGifsViewController.swift */; };
+		B806A16C1EF7051900983AD4 /* LikedGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806A16B1EF7051900983AD4 /* LikedGifsViewController.swift */; };
+		B82E33171F08DC33009CC611 /* SignInUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82E33161F08DC33009CC611 /* SignInUpViewController.swift */; };
+		B853395A1F0C441400606B1F /* GifCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85339591F0C441400606B1F /* GifCollectionViewCell.swift */; };
+		B856DAA71F361C780052708C /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B856DAA61F361C780052708C /* OrientationManager.swift */; };
+		B856DAA91F36212A0052708C /* PortraitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B856DAA81F36212A0052708C /* PortraitViewController.swift */; };
+		B85847851EE5C1CD004C15A9 /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85847841EE5C1CD004C15A9 /* GifViewController.swift */; };
+		B8677D571EFEA31B007C2BB9 /* FirebaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D561EFEA31B007C2BB9 /* FirebaseClient.swift */; };
+		B8677D591EFEA6AD007C2BB9 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D581EFEA6AD007C2BB9 /* FirebaseConstants.swift */; };
+		B8677D5B1EFEA80D007C2BB9 /* FirebaseDatabaseConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D5A1EFEA80D007C2BB9 /* FirebaseDatabaseConvenience.swift */; };
+		B8677D5D1EFEC2BE007C2BB9 /* FirebaseAuthConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D5C1EFEC2BE007C2BB9 /* FirebaseAuthConvenience.swift */; };
+		B8677D5F1EFEDA93007C2BB9 /* FacebookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D5E1EFEDA93007C2BB9 /* FacebookClient.swift */; };
+		B8677D621EFEDB13007C2BB9 /* FacebookConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D611EFEDB13007C2BB9 /* FacebookConvenience.swift */; };
+		B8677D641EFEDB33007C2BB9 /* FacebookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8677D631EFEDB33007C2BB9 /* FacebookConstants.swift */; };
+		B87202672003FEDE002BE79C /* Secrets-Empty.plist in Resources */ = {isa = PBXBuildFile; fileRef = B87202662003FEDE002BE79C /* Secrets-Empty.plist */; };
+		B8891A421ED717E60096CB98 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8891A411ED717E60096CB98 /* GoogleService-Info.plist */; };
+		B894721F1F0052DE004E9715 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B894721E1F0052DE004E9715 /* UserManager.swift */; };
+		B89472211F02F576004E9715 /* FirebaseServerValueConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89472201F02F575004E9715 /* FirebaseServerValueConvenience.swift */; };
+		B89472231F0319D3004E9715 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89472221F0319D3004E9715 /* ActivityIndicator.swift */; };
+		B89472251F04392F004E9715 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89472241F04392F004E9715 /* CoreDataStack.swift */; };
+		B89472281F043A55004E9715 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B89472261F043A55004E9715 /* CoreDataModel.xcdatamodeld */; };
+		B89F4F2F1EE2DF550078036B /* GfycatClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F2E1EE2DF550078036B /* GfycatClient.swift */; };
+		B89F4F311EE2E05B0078036B /* GfycatConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F301EE2E05B0078036B /* GfycatConstants.swift */; };
+		B89F4F331EE2E3820078036B /* GfycatConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F321EE2E3820078036B /* GfycatConvenience.swift */; };
+		B89F4F351EE45AEE0078036B /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F341EE45AEE0078036B /* EZSwipeController.swift */; };
+		B89F4F371EE45BD70078036B /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F361EE45BD70078036B /* SwipeViewController.swift */; };
+		B89F4F391EE46C2C0078036B /* GifModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F381EE46C2C0078036B /* GifModel.swift */; };
+		B89F4F3B1EE472870078036B /* GifManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F3A1EE472870078036B /* GifManager.swift */; };
+		B89F4F3D1EE4732B0078036B /* GfycatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89F4F3C1EE4732B0078036B /* GfycatRouter.swift */; };
+		B8B077FB1FDC1C0A00BCF44B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B077FA1FDC1C0A00BCF44B /* NetworkManager.swift */; };
+		B8C3186F1EE6DB44008C20A0 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3186E1EE6DB44008C20A0 /* UIConstants.swift */; };
+		B8D457AE1F31EC4600794CD1 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D457AD1F31EC4600794CD1 /* ForgotPasswordViewController.swift */; };
+		B8D8AE9D1ED487BC00CAF5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D8AE9C1ED487BC00CAF5B2 /* AppDelegate.swift */; };
+		B8D8AE9F1ED487BC00CAF5B2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D8AE9E1ED487BC00CAF5B2 /* LoadingViewController.swift */; };
+		B8D8AEA21ED487BC00CAF5B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D8AEA01ED487BC00CAF5B2 /* Main.storyboard */; };
+		B8D8AEA41ED487BC00CAF5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8D8AEA31ED487BC00CAF5B2 /* Assets.xcassets */; };
+		B8D8AEA71ED487BC00CAF5B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8D8AEA51ED487BC00CAF5B2 /* LaunchScreen.storyboard */; };
+		B8D8AEB71ED48B1700CAF5B2 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8D8AEB61ED48B1700CAF5B2 /* Secrets.plist */; };
+		B8F8E7561F20009400E334ED /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8E7551F20009400E334ED /* EmptyStateView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E06BA1B7DFAC7293B1A8225 /* Pods_Gif_My_Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gif_My_Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9723E45088F60C4F23B94C53 /* Pods-Gif My Life.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gif My Life.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gif My Life/Pods-Gif My Life.debug.xcconfig"; sourceTree = "<group>"; };
+		B80490EE1F06BECA005A659F /* CategoriesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesManager.swift; sourceTree = "<group>"; };
+		B80490F01F06BF6B005A659F /* CategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		B806A1671EF5B79B00983AD4 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		B806A1691EF7048B00983AD4 /* SavedGifsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedGifsViewController.swift; sourceTree = "<group>"; };
+		B806A16B1EF7051900983AD4 /* LikedGifsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikedGifsViewController.swift; sourceTree = "<group>"; };
+		B82E33161F08DC33009CC611 /* SignInUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUpViewController.swift; sourceTree = "<group>"; };
+		B85339591F0C441400606B1F /* GifCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifCollectionViewCell.swift; sourceTree = "<group>"; };
+		B856DAA61F361C780052708C /* OrientationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
+		B856DAA81F36212A0052708C /* PortraitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortraitViewController.swift; sourceTree = "<group>"; };
+		B85847841EE5C1CD004C15A9 /* GifViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
+		B8677D561EFEA31B007C2BB9 /* FirebaseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseClient.swift; path = FirebaseClient/FirebaseClient.swift; sourceTree = "<group>"; };
+		B8677D581EFEA6AD007C2BB9 /* FirebaseConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseConstants.swift; path = FirebaseClient/FirebaseConstants.swift; sourceTree = "<group>"; };
+		B8677D5A1EFEA80D007C2BB9 /* FirebaseDatabaseConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseDatabaseConvenience.swift; path = FirebaseClient/FirebaseDatabaseConvenience.swift; sourceTree = "<group>"; };
+		B8677D5C1EFEC2BE007C2BB9 /* FirebaseAuthConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseAuthConvenience.swift; path = FirebaseClient/FirebaseAuthConvenience.swift; sourceTree = "<group>"; };
+		B8677D5E1EFEDA93007C2BB9 /* FacebookClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookClient.swift; path = FacebookClient/FacebookClient.swift; sourceTree = "<group>"; };
+		B8677D611EFEDB13007C2BB9 /* FacebookConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConvenience.swift; path = FacebookClient/FacebookConvenience.swift; sourceTree = "<group>"; };
+		B8677D631EFEDB33007C2BB9 /* FacebookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FacebookConstants.swift; path = FacebookClient/FacebookConstants.swift; sourceTree = "<group>"; };
+		B87202662003FEDE002BE79C /* Secrets-Empty.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Secrets-Empty.plist"; sourceTree = "<group>"; };
+		B8891A411ED717E60096CB98 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B894721E1F0052DE004E9715 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		B89472201F02F575004E9715 /* FirebaseServerValueConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseServerValueConvenience.swift; path = FirebaseClient/FirebaseServerValueConvenience.swift; sourceTree = "<group>"; };
+		B89472221F0319D3004E9715 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B89472241F04392F004E9715 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B89472271F043A55004E9715 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B89F4F2E1EE2DF550078036B /* GfycatClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GfycatClient.swift; path = GfycatClient/GfycatClient.swift; sourceTree = "<group>"; };
+		B89F4F301EE2E05B0078036B /* GfycatConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GfycatConstants.swift; path = GfycatClient/GfycatConstants.swift; sourceTree = "<group>"; };
+		B89F4F321EE2E3820078036B /* GfycatConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GfycatConvenience.swift; path = GfycatClient/GfycatConvenience.swift; sourceTree = "<group>"; };
+		B89F4F341EE45AEE0078036B /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
+		B89F4F361EE45BD70078036B /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		B89F4F381EE46C2C0078036B /* GifModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifModel.swift; sourceTree = "<group>"; };
+		B89F4F3A1EE472870078036B /* GifManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GifManager.swift; sourceTree = "<group>"; };
+		B89F4F3C1EE4732B0078036B /* GfycatRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GfycatRouter.swift; path = GfycatClient/GfycatRouter.swift; sourceTree = "<group>"; };
+		B8B077FA1FDC1C0A00BCF44B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B8C3186E1EE6DB44008C20A0 /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		B8D457AD1F31EC4600794CD1 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B8D8AE991ED487BC00CAF5B2 /* Gif My Life.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gif My Life.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D8AE9C1ED487BC00CAF5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8D8AE9E1ED487BC00CAF5B2 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		B8D8AEA11ED487BC00CAF5B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8D8AEA31ED487BC00CAF5B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8D8AEA61ED487BC00CAF5B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8D8AEA81ED487BC00CAF5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8D8AEB61ED48B1700CAF5B2 /* Secrets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		B8F8E7551F20009400E334ED /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		E47C093BD92C1164E6ED501F /* Pods-Gif My Life.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gif My Life.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gif My Life/Pods-Gif My Life.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8D8AE961ED487BC00CAF5B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BE20702D73A3DDE626909B /* Pods_Gif_My_Life.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		313304A2076F381771A2D27A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E06BA1B7DFAC7293B1A8225 /* Pods_Gif_My_Life.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		472EF02B294ECBBA25D69978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9723E45088F60C4F23B94C53 /* Pods-Gif My Life.debug.xcconfig */,
+				E47C093BD92C1164E6ED501F /* Pods-Gif My Life.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8677D601EFEDA98007C2BB9 /* FacebookClient */ = {
+			isa = PBXGroup;
+			children = (
+				B8677D5E1EFEDA93007C2BB9 /* FacebookClient.swift */,
+				B8677D611EFEDB13007C2BB9 /* FacebookConvenience.swift */,
+				B8677D631EFEDB33007C2BB9 /* FacebookConstants.swift */,
+			);
+			name = FacebookClient;
+			sourceTree = "<group>";
+		};
+		B89472291F043D76004E9715 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B89472261F043A55004E9715 /* CoreDataModel.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		B8D8AE901ED487BC00CAF5B2 = {
+			isa = PBXGroup;
+			children = (
+				B8D8AE9B1ED487BC00CAF5B2 /* Gif My Life */,
+				B8D8AE9A1ED487BC00CAF5B2 /* Products */,
+				472EF02B294ECBBA25D69978 /* Pods */,
+				313304A2076F381771A2D27A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8D8AE9A1ED487BC00CAF5B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8D8AE991ED487BC00CAF5B2 /* Gif My Life.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8D8AE9B1ED487BC00CAF5B2 /* Gif My Life */ = {
+			isa = PBXGroup;
+			children = (
+				B8D8AE9C1ED487BC00CAF5B2 /* AppDelegate.swift */,
+				B8D8AEAE1ED4888C00CAF5B2 /* Storyboards */,
+				B8D8AEAF1ED488A000CAF5B2 /* Assets */,
+				B8D8AEB01ED488B300CAF5B2 /* SupportingFiles */,
+				B8D8AEB21ED488FE00CAF5B2 /* Model */,
+				B8D8AEB31ED4890900CAF5B2 /* View */,
+				B8D8AEB11ED488D100CAF5B2 /* Controller */,
+			);
+			path = "Gif My Life";
+			sourceTree = "<group>";
+		};
+		B8D8AEAE1ED4888C00CAF5B2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B8D8AEA01ED487BC00CAF5B2 /* Main.storyboard */,
+				B8D8AEA51ED487BC00CAF5B2 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B8D8AEAF1ED488A000CAF5B2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B8D8AEA31ED487BC00CAF5B2 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		B8D8AEB01ED488B300CAF5B2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B8891A411ED717E60096CB98 /* GoogleService-Info.plist */,
+				B8D8AEA81ED487BC00CAF5B2 /* Info.plist */,
+				B8D8AEB61ED48B1700CAF5B2 /* Secrets.plist */,
+				B87202662003FEDE002BE79C /* Secrets-Empty.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B8D8AEB11ED488D100CAF5B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8D8AE9E1ED487BC00CAF5B2 /* LoadingViewController.swift */,
+				B89F4F341EE45AEE0078036B /* EZSwipeController.swift */,
+				B89F4F361EE45BD70078036B /* SwipeViewController.swift */,
+				B85847841EE5C1CD004C15A9 /* GifViewController.swift */,
+				B806A1671EF5B79B00983AD4 /* UserProfileViewController.swift */,
+				B806A1691EF7048B00983AD4 /* SavedGifsViewController.swift */,
+				B806A16B1EF7051900983AD4 /* LikedGifsViewController.swift */,
+				B82E33161F08DC33009CC611 /* SignInUpViewController.swift */,
+				B8D457AD1F31EC4600794CD1 /* ForgotPasswordViewController.swift */,
+				B856DAA81F36212A0052708C /* PortraitViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B8D8AEB21ED488FE00CAF5B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B89472291F043D76004E9715 /* DataModel */,
+				B8D8AEB51ED48AD500CAF5B2 /* GfycatClient */,
+				B8D8AEB41ED48A4700CAF5B2 /* FirebaseClient */,
+				B8677D601EFEDA98007C2BB9 /* FacebookClient */,
+				B8C3186E1EE6DB44008C20A0 /* UIConstants.swift */,
+				B89F4F381EE46C2C0078036B /* GifModel.swift */,
+				B89F4F3A1EE472870078036B /* GifManager.swift */,
+				B894721E1F0052DE004E9715 /* UserManager.swift */,
+				B89472241F04392F004E9715 /* CoreDataStack.swift */,
+				B80490EE1F06BECA005A659F /* CategoriesManager.swift */,
+				B80490F01F06BF6B005A659F /* CategoryModel.swift */,
+				B856DAA61F361C780052708C /* OrientationManager.swift */,
+				B8B077FA1FDC1C0A00BCF44B /* NetworkManager.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B8D8AEB31ED4890900CAF5B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B89472221F0319D3004E9715 /* ActivityIndicator.swift */,
+				B85339591F0C441400606B1F /* GifCollectionViewCell.swift */,
+				B8F8E7551F20009400E334ED /* EmptyStateView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B8D8AEB41ED48A4700CAF5B2 /* FirebaseClient */ = {
+			isa = PBXGroup;
+			children = (
+				B8677D561EFEA31B007C2BB9 /* FirebaseClient.swift */,
+				B8677D581EFEA6AD007C2BB9 /* FirebaseConstants.swift */,
+				B8677D5A1EFEA80D007C2BB9 /* FirebaseDatabaseConvenience.swift */,
+				B8677D5C1EFEC2BE007C2BB9 /* FirebaseAuthConvenience.swift */,
+				B89472201F02F575004E9715 /* FirebaseServerValueConvenience.swift */,
+			);
+			name = FirebaseClient;
+			sourceTree = "<group>";
+		};
+		B8D8AEB51ED48AD500CAF5B2 /* GfycatClient */ = {
+			isa = PBXGroup;
+			children = (
+				B89F4F2E1EE2DF550078036B /* GfycatClient.swift */,
+				B89F4F301EE2E05B0078036B /* GfycatConstants.swift */,
+				B89F4F321EE2E3820078036B /* GfycatConvenience.swift */,
+				B89F4F3C1EE4732B0078036B /* GfycatRouter.swift */,
+			);
+			name = GfycatClient;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8D8AE981ED487BC00CAF5B2 /* Gif My Life */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8D8AEAB1ED487BC00CAF5B2 /* Build configuration list for PBXNativeTarget "Gif My Life" */;
+			buildPhases = (
+				F1CAEF5F41D97B8F3629C079 /* [CP] Check Pods Manifest.lock */,
+				B8D8AE951ED487BC00CAF5B2 /* Sources */,
+				B8D8AE961ED487BC00CAF5B2 /* Frameworks */,
+				B8D8AE971ED487BC00CAF5B2 /* Resources */,
+				0EFA7B039BB7ED9764F9212D /* [CP] Embed Pods Frameworks */,
+				5DB1DD127A6CD6109D6D476F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gif My Life";
+			productName = "Gif My Life";
+			productReference = B8D8AE991ED487BC00CAF5B2 /* Gif My Life.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8D8AE911ED487BC00CAF5B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Ali Kayhan";
+				TargetAttributes = {
+					B8D8AE981ED487BC00CAF5B2 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4DCJNVKJCK;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B8D8AE941ED487BC00CAF5B2 /* Build configuration list for PBXProject "Gif My Life" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8D8AE901ED487BC00CAF5B2;
+			productRefGroup = B8D8AE9A1ED487BC00CAF5B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8D8AE981ED487BC00CAF5B2 /* Gif My Life */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8D8AE971ED487BC00CAF5B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B87202672003FEDE002BE79C /* Secrets-Empty.plist in Resources */,
+				B8D8AEB71ED48B1700CAF5B2 /* Secrets.plist in Resources */,
+				B8D8AEA71ED487BC00CAF5B2 /* LaunchScreen.storyboard in Resources */,
+				B8891A421ED717E60096CB98 /* GoogleService-Info.plist in Resources */,
+				B8D8AEA41ED487BC00CAF5B2 /* Assets.xcassets in Resources */,
+				B8D8AEA21ED487BC00CAF5B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EFA7B039BB7ED9764F9212D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gif My Life/Pods-Gif My Life-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gif My Life/Pods-Gif My Life-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DB1DD127A6CD6109D6D476F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gif My Life/Pods-Gif My Life-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1CAEF5F41D97B8F3629C079 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gif My Life-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8D8AE951ED487BC00CAF5B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8B077FB1FDC1C0A00BCF44B /* NetworkManager.swift in Sources */,
+				B8D8AE9F1ED487BC00CAF5B2 /* LoadingViewController.swift in Sources */,
+				B89472211F02F576004E9715 /* FirebaseServerValueConvenience.swift in Sources */,
+				B8D457AE1F31EC4600794CD1 /* ForgotPasswordViewController.swift in Sources */,
+				B853395A1F0C441400606B1F /* GifCollectionViewCell.swift in Sources */,
+				B856DAA91F36212A0052708C /* PortraitViewController.swift in Sources */,
+				B8677D641EFEDB33007C2BB9 /* FacebookConstants.swift in Sources */,
+				B80490EF1F06BECB005A659F /* CategoriesManager.swift in Sources */,
+				B89F4F2F1EE2DF550078036B /* GfycatClient.swift in Sources */,
+				B89472231F0319D3004E9715 /* ActivityIndicator.swift in Sources */,
+				B8677D591EFEA6AD007C2BB9 /* FirebaseConstants.swift in Sources */,
+				B89F4F371EE45BD70078036B /* SwipeViewController.swift in Sources */,
+				B89F4F3D1EE4732B0078036B /* GfycatRouter.swift in Sources */,
+				B89F4F311EE2E05B0078036B /* GfycatConstants.swift in Sources */,
+				B894721F1F0052DE004E9715 /* UserManager.swift in Sources */,
+				B8C3186F1EE6DB44008C20A0 /* UIConstants.swift in Sources */,
+				B8677D5D1EFEC2BE007C2BB9 /* FirebaseAuthConvenience.swift in Sources */,
+				B8677D5F1EFEDA93007C2BB9 /* FacebookClient.swift in Sources */,
+				B8677D5B1EFEA80D007C2BB9 /* FirebaseDatabaseConvenience.swift in Sources */,
+				B89472281F043A55004E9715 /* CoreDataModel.xcdatamodeld in Sources */,
+				B80490F11F06BF6B005A659F /* CategoryModel.swift in Sources */,
+				B89F4F391EE46C2C0078036B /* GifModel.swift in Sources */,
+				B85847851EE5C1CD004C15A9 /* GifViewController.swift in Sources */,
+				B806A1681EF5B79B00983AD4 /* UserProfileViewController.swift in Sources */,
+				B856DAA71F361C780052708C /* OrientationManager.swift in Sources */,
+				B8677D621EFEDB13007C2BB9 /* FacebookConvenience.swift in Sources */,
+				B8D8AE9D1ED487BC00CAF5B2 /* AppDelegate.swift in Sources */,
+				B89472251F04392F004E9715 /* CoreDataStack.swift in Sources */,
+				B89F4F331EE2E3820078036B /* GfycatConvenience.swift in Sources */,
+				B806A16C1EF7051900983AD4 /* LikedGifsViewController.swift in Sources */,
+				B8F8E7561F20009400E334ED /* EmptyStateView.swift in Sources */,
+				B89F4F3B1EE472870078036B /* GifManager.swift in Sources */,
+				B89F4F351EE45AEE0078036B /* EZSwipeController.swift in Sources */,
+				B82E33171F08DC33009CC611 /* SignInUpViewController.swift in Sources */,
+				B806A16A1EF7048B00983AD4 /* SavedGifsViewController.swift in Sources */,
+				B8677D571EFEA31B007C2BB9 /* FirebaseClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B8D8AEA01ED487BC00CAF5B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8D8AEA11ED487BC00CAF5B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8D8AEA51ED487BC00CAF5B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8D8AEA61ED487BC00CAF5B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8D8AEA91ED487BC00CAF5B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8D8AEAA1ED487BC00CAF5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8D8AEAC1ED487BC00CAF5B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9723E45088F60C4F23B94C53 /* Pods-Gif My Life.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DCJNVKJCK;
+				INFOPLIST_FILE = "Gif My Life/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alikayhan.Gif-My-Life";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B8D8AEAD1ED487BC00CAF5B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E47C093BD92C1164E6ED501F /* Pods-Gif My Life.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4DCJNVKJCK;
+				INFOPLIST_FILE = "Gif My Life/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alikayhan.Gif-My-Life";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8D8AE941ED487BC00CAF5B2 /* Build configuration list for PBXProject "Gif My Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8D8AEA91ED487BC00CAF5B2 /* Debug */,
+				B8D8AEAA1ED487BC00CAF5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8D8AEAB1ED487BC00CAF5B2 /* Build configuration list for PBXNativeTarget "Gif My Life" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8D8AEAC1ED487BC00CAF5B2 /* Debug */,
+				B8D8AEAD1ED487BC00CAF5B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B89472261F043A55004E9715 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B89472271F043A55004E9715 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = B89472271F043A55004E9715 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8D8AE911ED487BC00CAF5B2 /* Project object */;
+}
