@@ -86,6 +86,11 @@ class UserManager: NSObject {
             
             self.userData = data
             
+            // If user has a username, assign it to username property.
+            if let username = self.userData[FirebaseClient.DatabaseKeys.Username] as? String {
+                self.username = username
+            }
+            
             // When a user signs up, its user ID stays same so readData returns valid userData.
             // This causes that createUserData has never been called when user has a valid username
             // and email. In order to be able to call createUserData(), this condition should be checked.
