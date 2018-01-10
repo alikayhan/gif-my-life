@@ -38,6 +38,11 @@ class LoadingViewController: PortraitUIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        // Stop the activity indicator if network is unreachable
+        if !(NetworkManager().shared.hasConnectivity()) {
+            activityIndicator.stopAnimating()
+        }
     }
     
     // MARK: - Methods
