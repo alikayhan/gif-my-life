@@ -40,8 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Read categories from Firebase
         CategoriesManager().shared.obtainCategories()
         
-        // Let Core Data stack auto save in every 60 seconds
-        stack.autoSave(60)
+        // Let Core Data stack auto save in every 10 seconds
+        stack.autoSave(10)
 
         return true
     }
