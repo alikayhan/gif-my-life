@@ -31,15 +31,18 @@ class LoadingViewController: PortraitUIViewController {
         stack = appDelegate.stack
         
         view.backgroundColor = UIConstants.Color.GMLPink
+        
         activityIndicator = ActivityIndicator(on: view).indicator
         activityIndicator.startAnimating()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
         
         createGifStack()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // Stop the activity indicator if network is unreachable
         // Adjust the loading label text according to network reachability
         if !(NetworkManager().shared.hasConnectivity()) {
@@ -47,6 +50,17 @@ class LoadingViewController: PortraitUIViewController {
             loadingLabel.text = UIConstants.Label.WeNeedInternetConnection
         } else {
             loadingLabel.text = UIConstants.Label.Loading
+        }
+    }
+    
+    // MARK: - Selectors
+    @objc fileprivate func applicationDidEnterForeground() {
+        if NetworkManager().shared.hasConnectivity() {
+            activityIndicator.startAnimating()
+            loadingLabel.text = UIConstants.Label.Loading
+            createGifStack()
+        } else {
+            loadingLabel.text = UIConstants.Label.WeNeedInternetConnection
         }
     }
     
