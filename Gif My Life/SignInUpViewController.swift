@@ -228,16 +228,22 @@ extension SignInUpViewController {
         } else {
             setUIEnabled(false)
             
-            FirebaseClient().shared.signIn(with: emailTextField.text!, and: passwordTextField.text!) { (user, error) in
-                guard let user = user else {
-                    self.showAlert(with: UIConstants.Error.SignInSignUpFailed)
-                    self.setUIEnabled(true)
-                    return
+            // Check the network reachability
+            if !(NetworkManager().shared.hasConnectivity()) {
+                showAlert(with: UIConstants.Error.NoInternetConnection)
+                setUIEnabled(true)
+            } else {
+                FirebaseClient().shared.signIn(with: emailTextField.text!, and: passwordTextField.text!) { (user, error) in
+                    guard let user = user else {
+                        self.showAlert(with: UIConstants.Error.SignInSignUpFailed)
+                        self.setUIEnabled(true)
+                        return
+                    }
+                    
+                    UserManager().shared.user = user
+                    UserManager().shared.obtainUserData()
+                    self.completeSignInSignUp()
                 }
-                
-                UserManager().shared.user = user
-                UserManager().shared.obtainUserData()
-                self.completeSignInSignUp()
             }
         }
     }
@@ -250,21 +256,27 @@ extension SignInUpViewController {
         } else {
             setUIEnabled(false)
             
-            FirebaseClient().shared.readData(at: "\(FirebaseClient.DatabaseKeys.Usernames)/\(self.usernameTextField.text!)") { (snapshot) in
-                if snapshot.exists() {
-                    self.showAlert(with: UIConstants.Error.UsernameAlreadyInUse)
-                    self.setUIEnabled(true)
-                } else {
-                    FirebaseClient().shared.signUp(with: self.emailTextField.text!, and: self.passwordTextField.text!) { (user, error) in
-                        guard let user = user else {
-                            self.showAlert(with: UIConstants.Error.SignInSignUpFailed)
-                            self.setUIEnabled(true)
-                            return
+            // Check the network reachability
+            if !(NetworkManager().shared.hasConnectivity()) {
+                showAlert(with: UIConstants.Error.NoInternetConnection)
+                setUIEnabled(true)
+            } else {
+                FirebaseClient().shared.readData(at: "\(FirebaseClient.DatabaseKeys.Usernames)/\(self.usernameTextField.text!)") { (snapshot) in
+                    if snapshot.exists() {
+                        self.showAlert(with: UIConstants.Error.UsernameAlreadyInUse)
+                        self.setUIEnabled(true)
+                    } else {
+                        FirebaseClient().shared.signUp(with: self.emailTextField.text!, and: self.passwordTextField.text!) { (user, error) in
+                            guard let user = user else {
+                                self.showAlert(with: UIConstants.Error.SignInSignUpFailed)
+                                self.setUIEnabled(true)
+                                return
+                            }
+                            UserManager().shared.user = user
+                            UserManager().shared.username = self.usernameTextField.text!
+                            UserManager().shared.obtainUserData()
+                            self.completeSignInSignUp()
                         }
-                        UserManager().shared.user = user
-                        UserManager().shared.username = self.usernameTextField.text!
-                        UserManager().shared.obtainUserData()
-                        self.completeSignInSignUp()
                     }
                 }
             }
