@@ -71,6 +71,7 @@ class GifViewController: UIViewController {
         // Check the network reachability
         if !(NetworkManager().shared.hasConnectivity()) {
             showAlert(with: UIConstants.Error.NoInternetConnection)
+            activityIndicator.stopAnimating()
         }
     }
     
