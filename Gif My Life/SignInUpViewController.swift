@@ -40,10 +40,6 @@ class SignInUpViewController: PortraitUIViewController {
         configureUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     // MARK: - Update View Constraints
     override func updateViewConstraints() {
         configureUI()

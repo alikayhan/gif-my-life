@@ -52,11 +52,7 @@ class GifViewController: UIViewController {
         self.isSwipeable = isSwipeable
     }
     
-    // MARK: - Lifecycle Functions
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    // MARK: - Lifecycle Functions   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
