@@ -117,19 +117,21 @@ class GifViewController: UIViewController {
                             DispatchQueue.global(qos: .default).async {
                                 do {
                                     self.gifData = try Data(contentsOf: URL(string: self.gif.max2MbURL)!)
+                                    
+                                    guard let gifImage = UIImage.gif(data: self.gifData) else {
+                                        return
+                                    }
+                                    
+                                    self.gifImage = gifImage
+                                    DispatchQueue.main.async {
+                                        self.gifView.image = self.gifImage
+                                        self.activityIndicator.stopAnimating()
+                                        self.downloadButton.isEnabled = true
+                                    }
                                 } catch {
                                     print(error.localizedDescription)
-                                }
-                                
-                                guard let gifImage = UIImage.gif(data: self.gifData) else {
-                                    return
-                                }
-                                
-                                self.gifImage = gifImage
-                                DispatchQueue.main.async {
-                                    self.gifView.image = self.gifImage
+                                    self.showAlert(with: UIConstants.Error.DownloadFailed)
                                     self.activityIndicator.stopAnimating()
-                                    self.downloadButton.isEnabled = true
                                 }
                             }
                         }
