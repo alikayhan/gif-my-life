@@ -17,6 +17,7 @@ class LoadingViewController: PortraitUIViewController {
     var viewControllerStack = [UIViewController]()
     var activityIndicator: NVActivityIndicatorView!
     var stack: CoreDataStack!
+    var loadingLabel: UILabel!
 
     override var prefersStatusBarHidden: Bool {
         return true
@@ -40,8 +41,12 @@ class LoadingViewController: PortraitUIViewController {
         super.viewDidAppear(animated)
         
         // Stop the activity indicator if network is unreachable
+        // Adjust the loading label text according to network reachability
         if !(NetworkManager().shared.hasConnectivity()) {
             activityIndicator.stopAnimating()
+            loadingLabel.text = UIConstants.Label.WeNeedInternetConnection
+        } else {
+            loadingLabel.text = UIConstants.Label.Loading
         }
     }
     
@@ -68,8 +73,7 @@ class LoadingViewController: PortraitUIViewController {
     }
 
     fileprivate func addLabel(on view: UIView) {
-        let loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
-        loadingLabel.text = UIConstants.Label.Loading
+        loadingLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         loadingLabel.translatesAutoresizingMaskIntoConstraints = false
         loadingLabel.lineBreakMode = .byWordWrapping
         loadingLabel.numberOfLines = 0

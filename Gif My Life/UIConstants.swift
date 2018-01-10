@@ -51,6 +51,7 @@ struct UIConstants {
     
     struct Label {
         static let Loading = "We are preparing the best gifs for you..."
+        static let WeNeedInternetConnection = "We need Internet connection to prepare the best gifs for you :( "
         
         struct TableViewRow {
             static let SignInWithEmail = "Sign in with e-mail"
